@@ -1,12 +1,10 @@
 name: Sync upstream
 
 on:
-  schedule:
-    - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
       target_commit:
-        description: 'Commit hash (leave blank to use latest commit)'
+        description: 'Commit hash or tag (leave blank to use latest release)'
         required: false
         type: string
 
